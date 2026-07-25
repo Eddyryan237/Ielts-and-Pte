@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
@@ -14,9 +15,10 @@ import './index.css'
 function App()
 {
     return (
-        <div className="bg-secondary min-h-screen">
-            <Navbar />
-            <Routes>
+        <>
+            <div className="bg-secondary min-h-screen">
+                <Navbar />
+                <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route
                     path="/services/ielts"
@@ -102,6 +104,11 @@ function App()
             <Footer />
             <FloatingWhatsApp />
         </div>
+        <TawkMessengerReact
+            propertyId="6a6486c8d0a4321d44bdecbf"
+            widgetId="1jucat0ft"
+        />
+        </>
     )
 }
 
