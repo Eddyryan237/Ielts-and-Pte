@@ -52,17 +52,23 @@ const Hero = () =>
                             variants={itemVariants}
                             className="text-5xl md:text-6xl font-bold font-poppins mb-6 leading-tight"
                         >
-                            Get Genuine
-                            <span className="gradient-text"> IELTS & PTE </span>
-                            Certificates
-                            <span className="gradient-text"> Fast & Secure</span>
+                            Professional
+                            <span className="gradient-text"> IELTS and PTE </span>
+                            Services
                         </motion.h1>
 
                         <motion.p
                             variants={itemVariants}
                             className="text-lg text-muted mb-8 leading-relaxed"
                         >
-                            Trusted worldwide service with fast processing and confidential handling. Get your certificate in as little as 48 hours. Accepted by universities and employers globally.
+                            IELTSPTEPRO helps students, migrants, and professionals understand IELTS and PTE requirements, preparation strategies, and the next steps that matter most for their goals. We focus on clear guidance, practical resources, and direct support when you need honest answers fast.
+                        </motion.p>
+
+                        <motion.p
+                            variants={itemVariants}
+                            className="text-base text-slate-300 mb-8 leading-relaxed"
+                        >
+                            Whether you are preparing for study abroad, migration, or a professional milestone, selecting the right test and building a strong plan can improve your confidence and outcomes. Our content and support are designed to help you compare your options and move forward with clarity.
                         </motion.p>
 
                         {/* Trust Badges */}
@@ -71,20 +77,20 @@ const Hero = () =>
                             className="grid grid-cols-2 gap-4 mb-8"
                         >
                             <div className="glass-effect p-4 rounded-base">
-                                <div className="text-2xl font-bold text-orange-400">24/7</div>
-                                <div className="text-sm text-muted">Customer Support</div>
+                                <div className="text-2xl font-bold text-orange-400">IELTS</div>
+                                <div className="text-sm text-muted">Academic and migration support</div>
                             </div>
                             <div className="glass-effect p-4 rounded-base">
-                                <div className="text-2xl font-bold text-orange-400">48h</div>
-                                <div className="text-sm text-muted">Fast Processing</div>
+                                <div className="text-2xl font-bold text-orange-400">PTE</div>
+                                <div className="text-sm text-muted">Computer-based guidance</div>
                             </div>
                             <div className="glass-effect p-4 rounded-base">
-                                <div className="text-2xl font-bold text-orange-400">195+</div>
-                                <div className="text-sm text-muted">Countries Accepted</div>
+                                <div className="text-2xl font-bold text-orange-400">Guidance</div>
+                                <div className="text-sm text-muted">Clear planning and next steps</div>
                             </div>
                             <div className="glass-effect p-4 rounded-base">
-                                <div className="text-2xl font-bold text-orange-400">100%</div>
-                                <div className="text-sm text-muted">Confidential</div>
+                                <div className="text-2xl font-bold text-orange-400">Support</div>
+                                <div className="text-sm text-muted">WhatsApp-first communication</div>
                             </div>
                         </motion.div>
 

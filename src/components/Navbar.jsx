@@ -9,10 +9,12 @@ export default function Navbar()
 
     const navLinks = [
         { name: 'Home', href: '/' },
-        { name: 'IELTS', href: '/services/ielts' },
-        { name: 'PTE', href: '/services/pte' },
-        { name: 'Upgrade Scores', href: '/upgrade-scores' },
-        { name: 'Buy PTE Q&A', href: '/buy-pte-questions-and-answers' },
+        { name: 'IELTS', href: '/ielts' },
+        { name: 'PTE', href: '/pte' },
+        { name: 'Services', href: '/services' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'About', href: '/about' },
+        { name: 'Contact', href: '/contact' },
         { name: 'Articles', href: '/articles' },
     ];
 
@@ -70,6 +72,7 @@ export default function Navbar()
                     {/* Mobile Menu Button */}
                     <div className="md:hidden">
                         <button
+                            aria-label="Toggle navigation menu"
                             onClick={toggleMenu}
                             className={`p-2 rounded-lg transition-all duration-300 ${isOpen
                                     ? 'bg-orange-500 text-white'

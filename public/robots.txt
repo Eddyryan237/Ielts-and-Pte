@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:
-https://ieltsptepro.com/sitemap.xml
+Sitemap: https://ieltsptepro.com/sitemap.xml

@@ -9,35 +9,48 @@ const FAQ = () =>
     const faqs = [
         {
             id: 1,
-            question: 'Are these certificates genuine and accepted worldwide?',
-            answer: 'Yes, all our certificates are genuine, verified, and accepted by 195+ countries including universities and employers globally. They carry the same weight as original certificates.',
+            question: 'What is IELTS?',
+            answer: 'IELTS is an English proficiency test used by universities, employers, and migration authorities to assess listening, reading, writing, and speaking skills. It is widely recognised for academic and migration pathways.',
         },
         {
             id: 2,
-            question: 'How long does it take to receive my certificate?',
-            answer: 'Our standard delivery time is 48 hours. We also offer express delivery in 24 hours. Once your order is placed, you can track the status in real-time through your dashboard.',
+            question: 'What is PTE?',
+            answer: 'PTE Academic is a computer-based English test that evaluates communication skills in an integrated digital format. It is commonly used for academic admissions and other professional or migration requirements.',
         },
         {
             id: 3,
-            question: 'Is my information completely confidential?',
-            answer: 'Absolutely. We use military-grade encryption and follow strict data protection protocols. Your information is never shared with third parties. We prioritize your privacy above all else.',
+            question: 'What is the difference between IELTS and PTE?',
+            answer: 'IELTS is known for a traditional test format, while PTE is usually delivered digitally with integrated tasks. The best choice depends on your comfort with the exam format, your target score, and the exact requirements of your institution or program.',
         },
         {
             id: 4,
-            question: 'What if I need help or have questions?',
-            answer: 'Our 24/7 customer support team is always available through WhatsApp, email, and phone. We respond within minutes to ensure all your concerns are addressed.',
+            question: 'How does the service work?',
+            answer: 'The process begins with understanding your goals, timeline, and exam requirements. We then provide practical guidance, answer your questions, and help you move toward the next step with a clearer plan.',
         },
         {
             id: 5,
-            question: 'Can I get both IELTS and PTE certificates?',
-            answer: 'Yes! We offer a bundle package that includes both IELTS and PTE certificates. It\'s cost-effective and saves you time compared to ordering separately.',
+            question: 'Can I get support for both IELTS and PTE?',
+            answer: 'Yes. We provide guidance for both IELTS and PTE planning, allowing you to compare your options and choose the route that fits your academic or migration needs best.',
         },
         {
             id: 6,
-            question: 'What payment methods do you accept?',
-            answer: 'We accept all major payment methods including credit cards, debit cards, bank transfers, and digital wallets. All transactions are secure and encrypted.',
+            question: 'What should I know before taking an English proficiency test?',
+            answer: 'Before booking a test, it helps to confirm the score requirement, understand the exam format, and create a preparation plan that focuses on your weak areas. Clear preparation reduces stress and improves performance.',
         },
     ]
+
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+            },
+        })),
+    };
 
     return (
         <section id="faq" className="py-20 md:py-32">
@@ -110,6 +123,8 @@ const FAQ = () =>
                         </motion.div>
                     ))}
                 </motion.div>
+
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
                 {/* Additional Help */}
                 <motion.div

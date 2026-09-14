@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import HomePage from './pages/HomePage'
+import InfoPage from './pages/InfoPage'
+import NotFoundPage from './pages/NotFoundPage'
 import ServicePage from './pages/ServicePage'
 import UpgradeScoresPage from './pages/UpgradeScoresPage'
 import BuyPteQuestionsPage from './pages/BuyPteQuestionsPage'
@@ -18,6 +20,193 @@ function App()
             <Navbar />
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="*" element={<NotFoundPage />} />
+                <Route
+                    path="/ielts"
+                    element={
+                        <InfoPage
+                            title="IELTS Services and Information"
+                            description="Learn about IELTS preparation, test information, common questions, and expert guidance for students planning study, migration, or career goals."
+                            keywords="IELTS services, IELTS preparation, IELTS information, IELTS test guide"
+                            badge="IELTS"
+                            intro="IELTS is one of the most widely recognised English language tests for study, migration, and professional pathways. Whether you are preparing for university admissions or a new visa process, understanding the test format and planning early can improve confidence and outcomes."
+                            sections={[
+                                {
+                                    heading: 'What IELTS measures',
+                                    body: 'The IELTS test assesses listening, reading, writing, and speaking. It is designed to measure how well a learner can use English in practical situations, from academic study to everyday communication. Many institutions and migration programs use IELTS results as part of their eligibility requirements.'
+                                },
+                                {
+                                    heading: 'How IELTS preparation works',
+                                    body: 'Strong IELTS preparation usually combines practice tests, targeted skill development, feedback, and time management. Students often focus on speaking fluency, writing structure, reading speed, and listening accuracy. A realistic preparation plan can make a major difference in confidence and performance.'
+                                },
+                                {
+                                    heading: 'Why students choose guided support',
+                                    body: 'Guidance helps candidates understand the structure of the exam, identify weak areas, and practise strategically. That can reduce confusion and improve efficiency before the test day. Good support also helps students stay motivated and focused on the areas that matter most.'
+                                }
+                            ]}
+                            relatedLinks={[
+                                { label: 'PTE services', href: '/pte' },
+                                { label: 'IELTS vs PTE', href: '/articles/pte-vs-ielts' },
+                                { label: 'IELTS preparation guide', href: '/articles/ielts-preparation-guide' }
+                            ]}
+                        />
+                    }
+                />
+                <Route
+                    path="/pte"
+                    element={
+                        <InfoPage
+                            title="PTE Services and Information"
+                            description="Explore PTE test information, preparation guidance, score understanding, and practical support for students preparing for English proficiency requirements."
+                            keywords="PTE services, PTE preparation, PTE test information, PTE score information"
+                            badge="PTE"
+                            intro="PTE Academic is a computer-based English proficiency test that focuses on real-life communication in academic and professional settings. It is widely used by institutions and organizations that need a quick, digital assessment of English capability."
+                            sections={[
+                                {
+                                    heading: 'What makes PTE different',
+                                    body: 'PTE is typically delivered in a digital format with integrated tasks that evaluate speaking, writing, reading, and listening in a single system. Many students prefer it because it feels more structured and time-driven, especially if they feel comfortable using a computer-based format.'
+                                },
+                                {
+                                    heading: 'How to prepare well',
+                                    body: 'PTE preparation usually benefits from timed practice, familiarity with task types, and regular review of weak areas. Practising under realistic conditions helps candidates improve pacing, response quality, and overall confidence before the official test day.'
+                                },
+                                {
+                                    heading: 'Planning for admissions and migration',
+                                    body: 'Students often prepare for PTE because they need a test result for university entry, migration, or professional requirements. Understanding score expectations and your target timeline is essential for a smoother application process.'
+                                }
+                            ]}
+                            relatedLinks={[
+                                { label: 'IELTS services', href: '/ielts' },
+                                { label: 'Understanding PTE scores', href: '/articles/understanding-pte-scores' },
+                                { label: 'PTE vs IELTS', href: '/articles/pte-vs-ielts' }
+                            ]}
+                        />
+                    }
+                />
+                <Route
+                    path="/services"
+                    element={
+                        <InfoPage
+                            title="IELTS and PTE Services"
+                            description="Explore IELTS and PTE services, support options, and practical guidance for students preparing for academic and migration goals."
+                            keywords="IELTS services, PTE services, IELTS and PTE support, English test guidance"
+                            badge="Services"
+                            intro="Our support is designed to help students understand their options, prepare strategically, and move forward with clear information. We focus on practical guidance, transparent communication, and a simple process that makes it easier to take the next step."
+                            sections={[
+                                {
+                                    heading: 'What we help with',
+                                    body: 'We support students who need assistance with IELTS and PTE planning, score-related guidance, preparation resources, and service-related questions. Our aim is to provide straightforward support and relevant next steps without unnecessary confusion.'
+                                },
+                                {
+                                    heading: 'A simple process',
+                                    body: 'Clients start by sharing their goal, timeline, and exam-related questions. From there, they receive tailored guidance, practical recommendations, and direct support on the best path forward for their situation.'
+                                },
+                                {
+                                    heading: 'Why clear guidance matters',
+                                    body: 'When students understand the exam, the score requirements, and the process behind the decision, they feel more confident and prepared. That clarity often reduces stress and improves the overall experience from preparation through application.'
+                                }
+                            ]}
+                            relatedLinks={[
+                                { label: 'IELTS services', href: '/ielts' },
+                                { label: 'PTE services', href: '/pte' },
+                                { label: 'Upgrade scores', href: '/upgrade-scores' }
+                            ]}
+                        />
+                    }
+                />
+                <Route
+                    path="/faq"
+                    element={
+                        <InfoPage
+                            title="IELTS and PTE Frequently Asked Questions"
+                            description="Find practical answers about IELTS, PTE, preparation, score expectations, and how to get the right guidance for your next steps."
+                            keywords="IELTS FAQ, PTE FAQ, IELTS questions, PTE questions, IELTS and PTE guidance"
+                            badge="FAQ"
+                            intro="Students often ask similar questions before booking a test, choosing a preparation route, or deciding which English credential fits their goals. Below are practical answers that help clarify the process and reduce uncertainty."
+                            sections={[
+                                {
+                                    heading: 'What is the difference between IELTS and PTE?',
+                                    body: 'IELTS is often known for its traditional format and widely recognised academic and migration use, while PTE is usually delivered digitally and focuses on integrated tasks. The best option depends on your comfort level, test goals, and application requirements.'
+                                },
+                                {
+                                    heading: 'How do I choose the right exam?',
+                                    body: 'Start by checking the exact requirements of your university, employer, or migration authority. Then compare the exam format, your study pattern, and the score target you need. A well-informed choice commonly leads to better preparation and stronger outcomes.'
+                                },
+                                {
+                                    heading: 'Can I get help with preparation strategy?',
+                                    body: 'Yes. Many students benefit from clear guidance on where to focus their effort, how to practise for weak sections, and how to approach test day with more confidence. Practical support can make preparation feel more structured and manageable.'
+                                }
+                            ]}
+                            relatedLinks={[
+                                { label: 'IELTS services', href: '/ielts' },
+                                { label: 'PTE services', href: '/pte' },
+                                { label: 'Articles hub', href: '/articles' }
+                            ]}
+                        />
+                    }
+                />
+                <Route
+                    path="/about"
+                    element={
+                        <InfoPage
+                            title="About IELTSPTEPRO"
+                            description="Learn more about IELTSPTEPRO, our focus on IELTS and PTE guidance, and the practical support we provide to students and applicants."
+                            keywords="about IELTSPTEPRO, IELTS and PTE support, exam guidance company"
+                            badge="About"
+                            intro="IELTSPTEPRO helps students and applicants understand the path to IELTS and PTE success through clear guidance, useful information, and direct support. We believe reliable information and practical next steps are essential when planning for education, migration, or professional goals."
+                            sections={[
+                                {
+                                    heading: 'Our approach',
+                                    body: 'We focus on helpful, honest guidance rather than shortcuts or vague promises. Our process is built around clear communication, useful information, and tailored support that helps students make informed decisions about their next steps.'
+                                },
+                                {
+                                    heading: 'What we support',
+                                    body: 'This includes IELTS and PTE information, preparation planning, score-related questions, and general guidance on how to approach the process confidently. We are committed to keeping the conversation practical, relevant, and easy to understand.'
+                                },
+                                {
+                                    heading: 'A trustworthy experience',
+                                    body: 'Students value straightforward responses, realistic timelines, and support that helps them build clarity before acting. We work to create that experience through responsive communication and educational resources that are genuinely useful.'
+                                }
+                            ]}
+                            relatedLinks={[
+                                { label: 'Services', href: '/services' },
+                                { label: 'Contact', href: '/contact' },
+                                { label: 'FAQ', href: '/faq' }
+                            ]}
+                        />
+                    }
+                />
+                <Route
+                    path="/contact"
+                    element={
+                        <InfoPage
+                            title="Contact IELTSPTEPRO"
+                            description="Contact IELTSPTEPRO for IELTS and PTE guidance, service information, and direct WhatsApp support for your next steps."
+                            keywords="contact IELTS PTE support, WhatsApp IELTS support, PTE guidance contact"
+                            badge="Contact"
+                            intro="If you are planning IELTS or PTE preparation, have questions about your score goals, or want to understand the next steps, our team is ready to help. Reach out through WhatsApp for a quick and clear conversation."
+                            sections={[
+                                {
+                                    heading: 'How to get in touch',
+                                    body: 'You can contact us through WhatsApp and share your goals, timeline, and questions. This is often the fastest way to receive clear guidance and practical next steps for your exam planning or preparation needs.'
+                                },
+                                {
+                                    heading: 'What to include in your message',
+                                    body: 'To help us respond efficiently, include the exam you are interested in, your target score or timeline, and any requirements that matter for your application or planning. The more context you share, the easier it is to give useful guidance.'
+                                },
+                                {
+                                    heading: 'Fast response support',
+                                    body: 'We aim to provide quick support for students who need a straightforward answer or a clearer direction. Clear communication is especially helpful when your timeline is important or your target score is specific.'
+                                }
+                            ]}
+                            relatedLinks={[
+                                { label: 'IELTS services', href: '/ielts' },
+                                { label: 'PTE services', href: '/pte' },
+                                { label: 'FAQ', href: '/faq' }
+                            ]}
+                        />
+                    }
+                />
                 <Route
                     path="/services/ielts"
                     element={
