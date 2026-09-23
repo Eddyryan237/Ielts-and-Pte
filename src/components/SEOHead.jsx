@@ -6,10 +6,12 @@ export default function SEOHead({
     description,
     keywords,
     canonical,
+    robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     ogTitle,
     ogDescription,
     ogUrl,
     ogImage = 'https://ieltsptepro.com/og-image.svg',
+    ogType = 'website',
     schema,
 })
 {
@@ -22,10 +24,22 @@ export default function SEOHead({
         const pageDescription = description || 'Professional IELTS and PTE services, preparation guidance, and useful information for students planning their next academic or migration step.';
         const pageKeywords = keywords || 'IELTS services, PTE services, IELTS preparation, PTE preparation, IELTS vs PTE';
         const pathname = location.pathname || '/';
-        const canonicalUrl = canonical || `${window.location.origin}${pathname}`;
+        const canonicalUrl = canonical || `https://ieltsptepro.com${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`;
         const finalOgTitle = ogTitle || pageTitle;
         const finalOgDescription = ogDescription || pageDescription;
         const finalOgUrl = ogUrl || canonicalUrl;
+        const pageSchema = schema || {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: pageTitle,
+            description: pageDescription,
+            url: canonicalUrl,
+            isPartOf: {
+                '@type': 'WebSite',
+                name: 'IELTSPTEPRO',
+                url: 'https://ieltsptepro.com/'
+            }
+        };
 
         document.title = pageTitle;
         document.documentElement.lang = 'en';
@@ -70,35 +84,25 @@ export default function SEOHead({
 
         setMeta('description', pageDescription);
         setMeta('keywords', pageKeywords);
-        setMeta('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+        setMeta('robots', robots);
         setMeta('author', 'IELTSPTEPRO');
         setMeta('og:title', finalOgTitle, true);
         setMeta('og:description', finalOgDescription, true);
-        setMeta('og:type', 'website', true);
+        setMeta('og:type', ogType, true);
         setMeta('og:url', finalOgUrl, true);
         setMeta('og:image', ogImage, true);
-        setMeta('twitter:card', 'summary_large_image', true);
-        setMeta('twitter:title', finalOgTitle, true);
-        setMeta('twitter:description', finalOgDescription, true);
-        setMeta('twitter:image', ogImage, true);
+        setMeta('og:site_name', 'IELTSPTEPRO', true);
+        setMeta('twitter:card', 'summary_large_image');
+        setMeta('twitter:title', finalOgTitle);
+        setMeta('twitter:description', finalOgDescription);
+        setMeta('twitter:image', ogImage);
 
         setLink('canonical', canonicalUrl);
 
-        if (schema)
-        {
-            setJsonLd(schema);
-        }
-        else
-        {
-            const existingScript = document.querySelector('script[data-seo-jsonld="true"]');
-            if (existingScript)
-            {
-                existingScript.remove();
-            }
-        }
+        setJsonLd(pageSchema);
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, [canonical, description, keywords, location.pathname, ogDescription, ogImage, ogTitle, ogUrl, schema, title]);
+    }, [canonical, description, keywords, location.pathname, ogDescription, ogImage, ogTitle, ogType, ogUrl, robots, schema, title]);
 
     return null;
 }

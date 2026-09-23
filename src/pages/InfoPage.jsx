@@ -20,7 +20,7 @@ export default function InfoPage({
                 title={title}
                 description={description}
                 keywords={keywords}
-                canonical={`https://ieltsptepro.com${window.location.pathname}`}
+                canonical={`https://ieltsptepro.com${window.location.pathname === '/' ? '/' : window.location.pathname.replace(/\/$/, '')}`}
             />
             <main className="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.3fr_0.7fr] gap-8">

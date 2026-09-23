@@ -61,29 +61,29 @@ export default function UpgradeScoresPage()
                         <h2 className="text-2xl font-semibold text-white mb-6">Share your score details</h2>
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
-                                <label className="block text-sm text-muted mb-2">Your name</label>
-                                <input name="name" value={formData.name} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="Enter your name" />
+                                <label htmlFor="upgrade-name" className="block text-sm text-muted mb-2">Your name</label>
+                                <input id="upgrade-name" name="name" value={formData.name} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="Enter your name" />
                             </div>
                             <div>
-                                <label className="block text-sm text-muted mb-2">Exam type</label>
-                                <select name="exam" value={formData.exam} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white">
+                                <label htmlFor="upgrade-exam" className="block text-sm text-muted mb-2">Exam type</label>
+                                <select id="upgrade-exam" name="exam" value={formData.exam} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white">
                                     <option value="IELTS">IELTS</option>
                                     <option value="PTE">PTE</option>
                                 </select>
                             </div>
                             <div className="grid md:grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block text-sm text-muted mb-2">Current score</label>
-                                    <input name="currentScore" value={formData.currentScore} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="e.g. 6.5" />
+                                    <label htmlFor="current-score" className="block text-sm text-muted mb-2">Current score</label>
+                                    <input id="current-score" name="currentScore" value={formData.currentScore} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="e.g. 6.5" />
                                 </div>
                                 <div>
-                                    <label className="block text-sm text-muted mb-2">Target score</label>
-                                    <input name="targetScore" value={formData.targetScore} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="e.g. 7.0" />
+                                    <label htmlFor="target-score" className="block text-sm text-muted mb-2">Target score</label>
+                                    <input id="target-score" name="targetScore" value={formData.targetScore} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="e.g. 7.0" />
                                 </div>
                             </div>
                             <div>
-                                <label className="block text-sm text-muted mb-2">Additional details</label>
-                                <textarea name="details" value={formData.details} onChange={handleChange} rows="4" className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="Tell us about your goal, deadline, or any special requirements" />
+                                <label htmlFor="upgrade-details" className="block text-sm text-muted mb-2">Additional details</label>
+                                <textarea id="upgrade-details" name="details" value={formData.details} onChange={handleChange} rows="4" className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="Tell us about your goal, deadline, or any special requirements" />
                             </div>
                             <button type="submit" className="btn-primary w-full justify-center">Send on WhatsApp</button>
                         </form>

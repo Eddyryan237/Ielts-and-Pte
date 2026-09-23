@@ -10,7 +10,8 @@ export default function NotFoundPage()
                 title="Page Not Found"
                 description="The page you are looking for could not be found. Explore the IELTSPTEPRO homepage, services, FAQ, or contact page instead."
                 keywords="404 page, IELTS page not found, PTE page not found"
-                canonical="https://ieltsptepro.com/404"
+                canonical="https://ieltsptepro.com/"
+                robots="noindex, follow"
             />
             <main className="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto glass-effect rounded-3xl p-10 text-center">

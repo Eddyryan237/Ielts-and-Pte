@@ -34,12 +34,14 @@ export default function Navbar()
                         whileHover={{ scale: 1.05 }}
                         className="flex items-center gap-2"
                     >
-                        <div className="w-10 h-10 bg-gradient-to-br from-primary to-orange-600 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-poppins font-bold text-lg">CP</span>
-                        </div>
-                        <span className="hidden sm:block text-white font-poppins font-bold text-lg">
-                            CertifyPro
-                        </span>
+                        <Link to="/" aria-label="IELTSPTEPRO home" className="flex items-center gap-2">
+                            <div className="w-10 h-10 bg-gradient-to-br from-primary to-orange-600 rounded-lg flex items-center justify-center">
+                                <span className="text-white font-poppins font-bold text-lg">IP</span>
+                            </div>
+                            <span className="hidden sm:block text-white font-poppins font-bold text-lg">
+                                IELTSPTEPRO
+                            </span>
+                        </Link>
                     </motion.div>
 
                     {/* Desktop Menu */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiCheck } from 'react-icons/fi'
 
@@ -8,6 +9,7 @@ const Services = () =>
         {
             id: 1,
             title: 'IELTS Certificate',
+            href: '/services/ielts',
             description: 'Get your IELTS certificate fast and securely. Accepted by universities worldwide.',
             features: [
                 'Genuine certificate',
@@ -22,6 +24,7 @@ const Services = () =>
         {
             id: 2,
             title: 'PTE Certificate',
+            href: '/services/pte',
             description: 'Professional English certification recognized globally. Quick processing guaranteed.',
             features: [
                 'Official PTE scores',
@@ -37,6 +40,7 @@ const Services = () =>
         {
             id: 3,
             title: 'Express Bundle',
+            href: '/services/bundle',
             description: 'Both IELTS and PTE certificates in one package. Maximum savings.',
             price: '$599',
             delivery: '24 hours',
@@ -150,6 +154,9 @@ const Services = () =>
                             >
                                 Get Started
                             </motion.a>
+                            <Link to={service.href} className="mt-3 block text-center text-sm font-semibold text-orange-400 hover:text-orange-300 transition-colors">
+                                Explore {service.title}
+                            </Link>
                         </motion.div>
                     ))}
                 </motion.div>

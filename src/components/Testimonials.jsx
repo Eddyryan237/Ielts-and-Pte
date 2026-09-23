@@ -102,6 +102,7 @@ const Testimonials = () =>
                                 <img
                                     src="/images/Achieve Your Goals_ IELTS Coaching in Jaipur.jpg"
                                     alt="IELTS Student Success - Graduate with IELTS certificate and UK flag"
+                                    loading="lazy"
                                     className="w-full h-auto object-cover"
                                 />
                             </div>
@@ -200,6 +201,7 @@ const Testimonials = () =>
                                             <img
                                                 src={testimonial.image}
                                                 alt={`${testimonial.name} profile`}
+                                                loading="lazy"
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>

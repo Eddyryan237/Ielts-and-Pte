@@ -49,7 +49,8 @@ export default function BuyPteQuestionsPage()
                         <h2 className="text-2xl font-semibold text-white mb-4">Request your package</h2>
                         <p className="text-muted mb-6">Leave your email and we will send the next steps on WhatsApp.</p>
                         <form onSubmit={handleSubmit} className="space-y-4">
-                            <input value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="Enter your email" />
+                            <label htmlFor="pte-contact-email" className="sr-only">Email address</label>
+                            <input id="pte-contact-email" value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="w-full rounded-lg border border-white/10 bg-slate-900/70 px-4 py-3 text-white" placeholder="Enter your email" />
                             <button type="submit" className="btn-primary w-full justify-center">Request PTE materials</button>
                         </form>
                     </motion.section>
