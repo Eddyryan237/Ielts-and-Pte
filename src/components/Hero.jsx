@@ -52,23 +52,23 @@ const Hero = () =>
                             variants={itemVariants}
                             className="text-5xl md:text-6xl font-bold font-poppins mb-6 leading-tight"
                         >
-                            Professional
-                            <span className="gradient-text"> IELTS and PTE </span>
-                            Services
+                            Buy a Certificate
+                            <span className="gradient-text"> Online </span>
+                            Without Exams
                         </motion.h1>
 
                         <motion.p
                             variants={itemVariants}
                             className="text-lg text-muted mb-8 leading-relaxed"
                         >
-                            IELTSPTEPRO helps students, migrants, and professionals understand IELTS and PTE requirements, preparation strategies, and the next steps that matter most for their goals. We focus on clear guidance, practical resources, and direct support when you need honest answers fast.
+                            IELTSPTEPRO is built for clients who want to buy a certificate online without exams for IELTS or PTE. We provide direct guidance, fast communication, and practical support for students, migrants, and professionals looking for quick certificate solutions.
                         </motion.p>
 
                         <motion.p
                             variants={itemVariants}
                             className="text-base text-slate-300 mb-8 leading-relaxed"
                         >
-                            Whether you are preparing for study abroad, migration, or a professional milestone, selecting the right test and building a strong plan can improve your confidence and outcomes. Our content and support are designed to help you compare your options and move forward with clarity.
+                            Whether you need a certificate for university entry, migration, or work requirements, our focus is on making the process faster, clearer, and easier to act on. We help you choose the right support route and move forward with confidence.
                         </motion.p>
 
                         {/* Trust Badges */}
@@ -102,18 +102,18 @@ const Hero = () =>
                             <motion.a
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                href="https://wa.me/61489926983?text=Hi%20I%20want%20to%20know%20more%20about%20IELTS%20and%20PTE%20services"
+                                href="https://wa.me/61489926983?text=Hi%20I%20want%20to%20buy%20a%20certificate%20online%20without%20exams"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 btn-primary"
                             >
                                 <FaWhatsapp className="text-xl" />
-                                Chat on WhatsApp
+                                Buy a Certificate Online
                             </motion.a>
                             <motion.a
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                href="https://wa.me/61489926983?text=Hi%20I%27d%20like%20more%20information%20about%20your%20services"
+                                href="https://wa.me/61489926983?text=Hi%20I%27d%20like%20more%20information%20about%20your%20certificate%20services"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 btn-secondary"

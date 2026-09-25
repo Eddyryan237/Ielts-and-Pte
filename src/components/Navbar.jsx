@@ -11,10 +11,10 @@ export default function Navbar()
         { name: 'Home', href: '/' },
         { name: 'IELTS', href: '/ielts' },
         { name: 'PTE', href: '/pte' },
+        { name: 'Buy Certificate', href: '/buy-a-certificate-online' },
         { name: 'Services', href: '/services' },
         { name: 'Certify Pro', href: '/certify-pro' },
         { name: 'FAQ', href: '/faq' },
-        { name: 'About', href: '/about' },
         { name: 'Contact', href: '/contact' },
         { name: 'Articles', href: '/articles' },
     ];

@@ -24,6 +24,7 @@ function App()
                 <Navbar />
                 <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/buy-a-certificate-online" element={<HomePage />} />
                 <Route path="*" element={<NotFoundPage />} />
                 <Route
                     path="/ielts"

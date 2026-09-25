@@ -20,22 +20,22 @@ export default function HomePage()
     return (
         <>
             <SEOHead
-                title="IELTS & PTE Certificate Services | Buy Certificate Without Exams"
-                description="Get trusted IELTS and PTE certificate support, fast processing, score upgrade assistance, and buy certificate without exams solutions for students worldwide."
-                keywords="IELTS certificate, PTE certificate, buy IELTS certificate, buy certificate without exams, PTE score upgrade, IELTS score upgrade"
+                title="Buy a Certificate Online | IELTS & PTE Certificates Without Exams"
+                description="Buy a certificate online with fast IELTS and PTE support, secure guidance, and practical certificate solutions without exams for study, migration, and work goals."
+                keywords="buy a certificate online, buy certificate without exams, IELTS certificate, PTE certificate, buy IELTS certificate, buy PTE certificate"
             />
             <main className="bg-secondary min-h-screen">
                 <Hero />
                 <section id="buy-certificate-without-exams" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
                     <div className="glass-effect rounded-3xl p-8 md:p-10">
                         <p className="text-orange-400 font-semibold uppercase tracking-[0.3em] text-sm mb-3">Fast certificate support</p>
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Buy certificate without exams</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Buy a certificate online without exams</h2>
                         <div className="grid md:grid-cols-2 gap-8 text-muted leading-relaxed">
                             <p>
-                                If you need an IELTS or PTE certificate quickly, our support team can help you understand the practical process, expected timelines, and the right next steps for your situation. We focus on clear guidance and direct communication so you can move forward with confidence.
+                                If you need an IELTS or PTE certificate quickly, our support team helps you move fast with clear guidance, realistic timelines, and direct communication. We focus on making the process simple for clients who want to buy a certificate online with confidence.
                             </p>
                             <p>
-                                Whether you are preparing for university entry, professional recognition, or migration requirements, we make it easier to compare your options and choose the most suitable certificate support route without long delays or confusion.
+                                Whether your goal is university entry, migration, or professional recognition, we make it easier to compare your options and choose the right certificate support route without long delays, confusion, or unnecessary waiting.
                             </p>
                         </div>
                     </div>
