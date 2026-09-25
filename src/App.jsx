@@ -12,6 +12,8 @@ import UpgradeScoresPage from './pages/UpgradeScoresPage'
 import BuyPteQuestionsPage from './pages/BuyPteQuestionsPage'
 import ArticlesHubPage from './pages/ArticlesHubPage'
 import ArticlePage from './pages/ArticlePage'
+import CertifyProPage from './pages/CertifyProPage'
+import BuyCertificateWithoutExamsPage from './pages/BuyCertificateWithoutExamsPage'
 import './index.css'
 
 function App()
@@ -279,6 +281,8 @@ function App()
                     }
                 />
                 <Route path="/upgrade-scores" element={<UpgradeScoresPage />} />
+                <Route path="/certify-pro" element={<CertifyProPage />} />
+                <Route path="/buy-certificate-without-exams" element={<BuyCertificateWithoutExamsPage />} />
                 <Route path="/buy-pte-questions-and-answers" element={<BuyPteQuestionsPage />} />
                 <Route path="/articles" element={<ArticlesHubPage />} />
                 <Route path="/articles/how-to-verify-a-pte-certificate" element={<ArticlePage title="How to Verify a PTE Certificate" description="Learn how to verify a PTE certificate and understand the right checks to perform before trusting it." keywords="verify PTE certificate, PTE certificate verification, check PTE certificate" intro="A PTE certificate can be an important document for admissions or professional requirements, so it is essential to understand how to verify it properly and what signs to look for." sections={[{ heading: 'Why verification matters', body: 'Verification helps protect you from confusion, incorrect documentation, or reliance on records that may not match official standards. It is especially important when a document is used for admissions, migration, or employment purposes.' }, { heading: 'What to check', body: 'Review the candidate details, test date, score report references, and any official verification steps provided by the testing body. If you are unsure, check with the official organisation or request a direct confirmation channel.' }, { heading: 'Best practice', body: 'Keep copies of the certificate, score report, and communication records. If you need guide or support, our team can help you understand the right steps to take and provide practical next actions.' }]} relatedLinks={[{ label: 'PTE vs IELTS', href: '/articles/pte-vs-ielts' }, { label: 'Understanding PTE Scores', href: '/articles/understanding-pte-scores' }, { label: 'Everything About PTE Certificates', href: '/articles/everything-about-pte-certificates' }]} />} />

@@ -160,6 +160,36 @@ const Services = () =>
                         </motion.div>
                     ))}
                 </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mt-12 glass-effect rounded-3xl p-8 md:p-10"
+                >
+                    <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
+                        <div>
+                            <p className="text-orange-400 font-semibold uppercase tracking-[0.3em] text-sm mb-3">Fast-track support</p>
+                            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Buy certificate without exams</h3>
+                            <p className="text-muted leading-relaxed mb-6">
+                                For clients who need a trusted IELTS or PTE certificate solution without the long preparation process, we provide secure guidance, quick communication, and practical next steps.
+                            </p>
+                            <div className="flex flex-wrap gap-3">
+                                <Link to="/buy-certificate-without-exams" className="btn-primary">Learn more</Link>
+                                <a href="https://wa.me/61489926983?text=Hi%20I%20want%20to%20buy%20certificate%20without%20exams" target="_blank" rel="noopener noreferrer" className="btn-secondary">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+                        <div className="rounded-2xl border border-orange-500/30 bg-slate-900/60 p-6">
+                            <p className="text-sm uppercase tracking-[0.25em] text-orange-300 mb-3">What you get</p>
+                            <ul className="space-y-3 text-muted">
+                                <li>• Fast certificate support for IELTS and PTE needs</li>
+                                <li>• Straightforward guidance without long prep delays</li>
+                                <li>• Secure WhatsApp communication and follow-up</li>
+                                <li>• Tailored help based on your target time and goals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     )

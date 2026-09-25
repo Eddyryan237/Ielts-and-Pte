@@ -12,6 +12,7 @@ export default function Navbar()
         { name: 'IELTS', href: '/ielts' },
         { name: 'PTE', href: '/pte' },
         { name: 'Services', href: '/services' },
+        { name: 'Certify Pro', href: '/certify-pro' },
         { name: 'FAQ', href: '/faq' },
         { name: 'About', href: '/about' },
         { name: 'Contact', href: '/contact' },
