@@ -9,5 +9,38 @@ services:
         value: 22
     routes:
       - type: rewrite
-        source: /*
+        source: /
+        destination: /index.html
+      - type: rewrite
+        source: /ielts
+        destination: /index.html
+      - type: rewrite
+        source: /pte
+        destination: /index.html
+      - type: rewrite
+        source: /services
+        destination: /index.html
+      - type: rewrite
+        source: /services/*
+        destination: /index.html
+      - type: rewrite
+        source: /about
+        destination: /index.html
+      - type: rewrite
+        source: /contact
+        destination: /index.html
+      - type: rewrite
+        source: /faq
+        destination: /index.html
+      - type: rewrite
+        source: /articles
+        destination: /index.html
+      - type: rewrite
+        source: /articles/*
+        destination: /index.html
+      - type: rewrite
+        source: /upgrade-scores
+        destination: /index.html
+      - type: rewrite
+        source: /buy-pte-questions-and-answers
         destination: /index.html

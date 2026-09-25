@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
+Allow: /images/
+Allow: /og-image.svg
 
+Host: ieltsptepro.com
 Sitemap: https://ieltsptepro.com/sitemap.xml
+
+Disallow: /private/
+Disallow: /admin/
+Disallow: /_drafts/
+Disallow: /tmp/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /src/
+Disallow: /vscode/
+Disallow: /\.git/
+Disallow: /.github/
+Disallow: /\.vscode/

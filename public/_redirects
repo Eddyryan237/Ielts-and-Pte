@@ -1,1 +1,18 @@
-/* /index.html 200
+https://www.ieltsptepro.com/* https://ieltsptepro.com/:splat 301!
+http://www.ieltsptepro.com/* https://ieltsptepro.com/:splat 301!
+http://ieltsptepro.com/* https://ieltsptepro.com/:splat 301!
+
+/ /index.html 200
+/ielts /index.html 200
+/pte /index.html 200
+/services /index.html 200
+/services/* /index.html 200
+/about /index.html 200
+/contact /index.html 200
+/faq /index.html 200
+/articles /index.html 200
+/articles/* /index.html 200
+/upgrade-scores /index.html 200
+/buy-pte-questions-and-answers /index.html 200
+
+/* /404.html 404

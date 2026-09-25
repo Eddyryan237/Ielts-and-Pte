@@ -1,6 +1,14 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+const buildCanonicalUrl = (pathname = '/', overridePath = null) =>
+{
+    const normalizedPath = (overridePath || pathname || '/').split('?')[0].split('#')[0];
+    const safePath = normalizedPath === '' ? '/' : normalizedPath;
+    const withoutTrailingSlash = safePath === '/' ? '/' : safePath.replace(/\/+$/, '');
+    return `https://ieltsptepro.com${withoutTrailingSlash}`;
+};
+
 export default function SEOHead({
     title,
     description,
@@ -23,8 +31,7 @@ export default function SEOHead({
         const pageTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | IELTS & PTE Services`;
         const pageDescription = description || 'Professional IELTS and PTE services, preparation guidance, and useful information for students planning their next academic or migration step.';
         const pageKeywords = keywords || 'IELTS services, PTE services, IELTS preparation, PTE preparation, IELTS vs PTE';
-        const pathname = location.pathname || '/';
-        const canonicalUrl = canonical || `https://ieltsptepro.com${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`;
+        const canonicalUrl = canonical || buildCanonicalUrl(location.pathname);
         const finalOgTitle = ogTitle || pageTitle;
         const finalOgDescription = ogDescription || pageDescription;
         const finalOgUrl = ogUrl || canonicalUrl;
@@ -98,10 +105,13 @@ export default function SEOHead({
         setMeta('twitter:image', ogImage);
 
         setLink('canonical', canonicalUrl);
-
         setJsonLd(pageSchema);
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const currentScroll = window.scrollY;
+        if (currentScroll > 0)
+        {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     }, [canonical, description, keywords, location.pathname, ogDescription, ogImage, ogTitle, ogType, ogUrl, robots, schema, title]);
 
     return null;

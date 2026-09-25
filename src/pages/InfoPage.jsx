@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEOHead from '../components/SEOHead';
 
@@ -14,13 +14,16 @@ export default function InfoPage({
     ctaHref = 'https://wa.me/61489926983?text=Hi%20I%20want%20to%20talk%20with%20IELTSPTEPRO',
     badge = 'Info'
 }) {
+    const location = useLocation();
+    const canonicalUrl = `https://ieltsptepro.com${location.pathname === '/' ? '/' : location.pathname.replace(/\/$/, '')}`;
+
     return (
         <>
             <SEOHead
                 title={title}
                 description={description}
                 keywords={keywords}
-                canonical={`https://ieltsptepro.com${window.location.pathname === '/' ? '/' : window.location.pathname.replace(/\/$/, '')}`}
+                canonical={canonicalUrl}
             />
             <main className="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.3fr_0.7fr] gap-8">
